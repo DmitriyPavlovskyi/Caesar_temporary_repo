@@ -78,5 +78,4 @@
             this.renderGroups();
         }
     });
-
 })(CS.Groups, app);
