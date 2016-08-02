@@ -30,8 +30,8 @@
 
             if (routes[path]) {
                 app.mediator.publish('Menu: changed-page');
-                this.navigate(routes[path], {trigger: true});
-            }
+                this.navigate(routes[path], {trigger: true}); 
+            }   
         },
 
         navToLocations: function () {
@@ -40,6 +40,7 @@
         },
 
         navToCancelForm: function () {
+            
             this.navigate(this.currentUrl);
         },
 
@@ -65,5 +66,4 @@
            app.mediator.publish('Error: show-page-404');
         }
     });
-    
 })(CS, app);

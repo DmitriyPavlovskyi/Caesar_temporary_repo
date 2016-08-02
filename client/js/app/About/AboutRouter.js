@@ -4,8 +4,7 @@
 
         routes: {    
             'About(/)': 'renderPageAbout',
-            'About*path': 'notFound',
-            'About/:direction': 'showDirection' //edition
+            'About*path': 'notFound' 
         },
 
         initialize: function () {
@@ -19,7 +18,7 @@
 
         notFound: function () {
             app.mediator.publish('Error: show-page-404');
-        }  
+        }
 
     });
 })(CS.About, app);

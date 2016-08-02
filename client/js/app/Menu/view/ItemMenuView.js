@@ -21,6 +21,8 @@
             this.$el.addClass('activeItem');
             app.mediator.publish('Menu: ' + this.model.get('description'));
             app.mediator.publish('Menu: SelectedPage', this.model.get('description'));
-        }       
+
+        }
+        
     });
 })(CS.Menu, app);

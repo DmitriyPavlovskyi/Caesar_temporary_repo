@@ -19,7 +19,6 @@
 
         render: function () {
             var $groupCollection = $('.group-collection'),
-                $leftSideBar = $('.group-list-footer'),
                 $button = $('.myGroups');
 
             this.$el.html(templates.groupListTpl);
@@ -31,13 +30,13 @@
             if (app.user.attributes.role == "Teacher" && this.collection.findMyGroups(app.user.getShortName()).length > 0) {
                 this.$el.append('<button class="myGroups">My Groups</button>');
             } 
-
+          
             return this;
         },
 
         createPaginator: function () {
             this.paginatorView = new app.PaginatorView({
-                pageSize: 8,
+                pageSize: 10,
                 channel: 'GroupList'
             });
 

@@ -6,9 +6,10 @@ var CS = {},
     store = {},
     i = {};
 
-System.register(CS, ['ErrorPage', 'Menu', 'Groups', 'Schedule', 'User', 'Locations', 'Messenger', 'About', 'Storage']);
 
-System.register(app, ['mediator', 'filter', 'router', 'subRouters', 'notFound', 'user', 'userController', 'menuController', 'infoblock', 'preload']);
+System.register(CS, ['ErrorPage', 'Menu', 'Groups', 'Schedule', 'User', 'Locations', 'Messenger', 'About']);
+
+System.register(app, ['mediator', 'filter', 'router', 'subRouters', 'notFound', 'user', 'userController', 'menuController']);
 
 $(function () {
     System.startWebSocket();
@@ -19,7 +20,6 @@ $(function () {
         app.filter = new CS.Filter();
         app.router = new CS.Router();
 
-        app.preload = new CS.Storage.Controller().load();
         app.userController = new CS.User.Controller();
         app.notFoundController = new CS.ErrorPage.Controller();
         app.messengerController = new CS.Messenger.Controller();
