@@ -50,7 +50,8 @@
     float: right;
     padding: 4px 5px;
     border: 0;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: Tahoma;
 }
 
 .login button {
